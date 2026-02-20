@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Trabajador - J Servicios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">J Servicios</div>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="botones">
+            <a href="registro-trabajador.html" class="btn btn-dorado">Soy Trabajador</a>
+            <a href="registro-empleador.html" class="btn btn-outline">Soy Empleador</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 2rem 5%;">
+            <h1>Registrate como <span>Trabajador</span></h1>
+            <p>Completá el formulario. Es gratis y sin vueltas.</p>
+        </section>
+
+        <section style="max-width: 600px; margin: 2rem auto; padding: 0 5%;">
+            <form id="registroForm" style="background: var(--crema); padding: 2rem; border-radius: 10px;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--marron);">Nombre completo *</label>
+                    <input type="text" id="nombre" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--marron);">WhatsApp *</label>
+                    <input type="tel" id="whatsapp" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--marron);">Zona donde trabajás *</label>
+                    <input type="text" id="zona" required placeholder="Ej: Flores, CABA" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--marron);">¿Qué sabés hacer? *</label>
+                    <textarea id="oficio" required rows="4" placeholder="Ej: Corto el pasto, hago limpieza, soy ayudante de albañil, arreglo heladeras..." style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--marron);">¿Tenés monotributo?</label>
+                    <select id="monotributo" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="no">No</option>
+                        <option value="si">Sí</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+                <button type="submit" class="btn btn-dorado" style="width: 100%; padding: 1rem; border: none; font-size: 1.1rem; cursor: pointer;">Registrarme gratis</button>
+            </form>
+            
+            <p id="mensaje" style="text-align: center; margin-top: 1rem; color: green; display: none;">✅ ¡Registro exitoso!</p>
+            
+            <div style="text-align: center; margin: 2rem auto; padding: 1rem; background: var(--marron); color: white; border-radius: 10px;">
+                <p style="color: var(--dorado); font-weight: bold;">¿Problemas para registrarte?</p>
+                <p>📧 jservicios636@gmail.com</p>
+                <p>📱 <a href="https://wa.me/5491159085736" style="color: var(--dorado);">11-5908-5736 (WhatsApp)</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">J Servicios — La comunidad del trabajo bien hecho</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 1rem 0;">
+                <div><p style="color: #D4AF37;">📧 Email:</p><p>jservicios636@gmail.com</p></div>
+                <div><p style="color: #D4AF37;">📱 WhatsApp:</p><p><a href="https://wa.me/5491159085736" style="color: white; text-decoration: none;">11-5908-5736</a></p></div>
+            </div>
+            <p style="margin-top: 2rem;">© 2024 J Servicios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                zona: document.getElementById('zona').value,
+                oficio: document.getElementById('oficio').value,
+                monotributo: document.getElementById('monotributo').value
+            };
+
+            try {
+                const res = await fetch('http://localhost:3000/api/registro-trabajador', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                
+                if (res.ok) {
+                    document.getElementById('mensaje').style.display = 'block';
+                    document.getElementById('registroForm').reset();
+                }
+            } catch (error) {
+                alert('Error al registrar. Asegurate que el backend esté corriendo (node server.js)');
+            }
+        });
+    </script>
+    <script src="../js/bot-ayuda.js"></script>
+</body>
+</html>

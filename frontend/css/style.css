@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --marron: #5D3A1A;
+    --marron-claro: #7B5E3B;
+    --dorado: #D4AF37;
+    --dorado-claro: #E5C87B;
+    --crema: #F9F5F0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--marron);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dorado);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-dorado {
+    background: var(--dorado);
+    color: var(--marron);
+}
+
+.btn-outline {
+    border: 2px solid var(--dorado);
+    color: white;
+}
+
+.btn-marron {
+    background: var(--marron);
+    color: white;
+}
+
+.grande {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--marron), var(--marron-claro));
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.como-funciona {
+    padding: 4rem 5%;
+    text-align: center;
+    background: var(--crema);
+}
+
+.como-funciona h2 {
+    color: var(--marron);
+    margin-bottom: 3rem;
+}
+
+.pasos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.paso {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.numero {
+    width: 50px;
+    height: 50px;
+    background: var(--dorado);
+    color: var(--marron);
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+footer {
+    background: var(--marron);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
