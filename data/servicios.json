@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "titulo": "Construcción",
+        "icono": "🏗️",
+        "descripcion": "Obra nueva, ampliaciones y reformas integrales",
+        "destacado": true
+    },
+    {
+        "id": 2,
+        "titulo": "Albañilería",
+        "icono": "🧱",
+        "descripcion": "Tabiques, revoques, contrapisos",
+        "destacado": true
+    },
+    {
+        "id": 3,
+        "titulo": "Reparaciones",
+        "icono": "🔧",
+        "descripcion": "Filtraciones, grietas, instalaciones",
+        "destacado": true
+    },
+    {
+        "id": 4,
+        "titulo": "Pintura",
+        "icono": "🎨",
+        "descripcion": "Interior y exterior",
+        "destacado": true
+    }
+]
