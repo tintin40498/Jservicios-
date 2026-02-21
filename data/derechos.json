@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "titulo": "Jornada laboral",
+        "contenido": "La jornada de trabajo se acuerda entre las partes según las necesidades de cada obra. Respetamos los horarios pactados.",
+        "categoria": "jornada",
+        "fecha": "2024-01-15"
+    },
+    {
+        "id": 2,
+        "titulo": "Pago por trabajo",
+        "contenido": "Los pagos se realizan según lo acordado: por día, por obra o por semana. Siempre en tiempo y forma.",
+        "categoria": "pagos",
+        "fecha": "2024-01-15"
+    },
+    {
+        "id": 3,
+        "titulo": "Descansos",
+        "contenido": "Se respetan los descansos durante la jornada y los días acordados para cada obra.",
+        "categoria": "descanso",
+        "fecha": "2024-01-15"
+    },
+    {
+        "id": 4,
+        "titulo": "Trato digno",
+        "contenido": "En JServicios priorizamos el respeto y la comunicación clara con todos los trabajadores.",
+        "categoria": "trato",
+        "fecha": "2024-01-15"
+    },
+    {
+        "id": 5,
+        "titulo": "Herramientas y materiales",
+        "contenido": "Acordamos previamente qué herramientas aporta cada parte y nos hacemos responsables de lo pactado.",
+        "categoria": "materiales",
+        "fecha": "2024-01-15"
+    },
+    {
+        "id": 6,
+        "titulo": "Seguridad en la obra",
+        "contenido": "Trabajamos con las medidas de seguridad necesarias para cuidar la integridad de todos.",
+        "categoria": "seguridad",
+        "fecha": "2024-01-15"
+    }
+]
